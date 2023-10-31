@@ -35,3 +35,5 @@ To view my Personal Portfolio, simply open the `index.html` file in your web bro
 ## License
 
 This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
+
+Please note that while I have strived to meet these user stories, certain changes were made to the HTML structure, including IDs and classes, to better suit my project. As a result, the code may not fully align with all of FreeCodeCamp's original User Stories.
