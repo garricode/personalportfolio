@@ -7,21 +7,26 @@
 
 /* Scroll behavior for anchor links */
 html {
-    scroll-behavior: smooth; /* Enable smooth scrolling */
+    scroll-behavior: smooth;
 }
 
 /* Set a background color for the body */
 body {
     min-width: 290px;
-    color: #333; /* Dark gray font color */
-    background-color: #f2f2f2; /* Light gray background */
-    font-family: 'Open Sans', Arial, sans-serif;
-    line-height: 1.5;
+    color: #333; /* Dark gray font color for accessibility */
+    background-color: #F8F8F8; /* Light gray background for readability */
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
 }
 
-/* Style the navigation bar */
+/* Add elegant fonts for header, headings, and buttons */
+h1, h2, h3, h4, h5, h6, #profile-link, #contact-link {
+    font-family: 'Helvetica Neue', sans-serif;
+}
+
+/* Style the navigation bar with a modern and user-friendly approach */
 #navbar {
-    background-color: #4A90E2; /* Blue background color that matches your profile */
+    background-color: #222; /* Dark background for a modern look */
     position: fixed;
     top: 0;
     left: 0;
@@ -30,7 +35,7 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 10px 0; /* Added padding to improve visibility */
+    padding: 10px 0;
 }
 
 #navbar ul {
@@ -41,137 +46,181 @@ body {
 }
 
 #navbar li {
-    margin: 0 20px; /* Increased margin for better spacing */
+    margin: 0 20px;
 }
 
 #navbar a {
     text-decoration: none;
-    color: #fff; /* White font color */
+    color: #FFA500; /* Orange font color for a modern touch */
     cursor: pointer;
-    font-size: 1.8rem; /* Increased font size for navigation links */
+    font-size: 1.8rem;
 }
 
-/* Style the header/welcome section */
+/* Style the header/welcome section with a clean and elegant design */
 #welcome-section {
-    background: linear-gradient(135deg, #f2f2f2, #e6e6e6);
+    background: linear-gradient(135deg, #F8F8F8, #E0E0E0); /* Light gradient background for readability */
     text-align: center;
-    padding: 100px 0; /* Increased padding for emphasis */
-    color: #333; /* Slightly darker gray font color */
+    padding: 20vh 0; /* Adjusted padding and height for full viewport coverage */
+    color: #333; /* Dark gray font color for readability */
 }
 
 #welcome-section h1 {
-    font-size: 3rem; /* Increased font size for the heading */
-    margin-bottom: 20px; /* Increased margin for better spacing */
-    font-family: 'Oswald', sans-serif;
+    font-size: 3rem;
+    margin-bottom: 20px;
+    font-family: 'Georgia', serif;
 }
 
 #welcome-section p {
-    font-size: 1.6rem; /* Increased font size for the description */
+    font-size: 1.6rem;
 }
 
 #profile-link {
     display: inline-block;
-    margin-top: 30px; /* Increased margin for better spacing */
-    padding: 20px 40px; /* Increased padding for better visibility */
-    background-color: #4A90E2; /* Blue background color that matches your profile */
-    color: #fff; /* White font color */
+    margin-top: 30px;
+    padding: 20px 40px;
+    background-color: #FFA500; /* Orange background color for a modern twist */
+    color: #333; /* Dark gray font color for readability */
     text-decoration: none;
-    border-radius: 10px; /* Increased border radius for a rounded button appearance */
-    font-size: 1.8rem; /* Increased font size for the button */
+    border-radius: 10px;
+    font-size: 1.8rem;
 }
 
-/* Style the project tiles */
-.project-tile {
-    background-color: #f8f8f8; /* Light gray background */
-    padding: 30px; /* Increased padding for a more modern appearance */
-    margin: 20px;
-    border: 2px solid #ddd; /* Add a border for a polished look */
-    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
-    max-width: 100%; /* Make project tiles take full width on all screens */
-    text-align: center; /* Center the text within the tiles */
-}
-
-/* Style the project image */
-.project-tile img {
-    max-width: 100%; /* Ensure the image doesn't exceed its container's width */
-    height: auto; /* Maintain the image's aspect ratio */
-    width: 100%; /* Make the image responsive without a fixed height */
-}
-
-/* Ensure h2 remains responsive and wraps if needed */
-.project-tile h2 {
-    font-size: 2rem; /* Increased font size for project titles */
-    word-wrap: break-word; /* Allow long words to wrap */
-}
-
-/* Style <p> elements */
-p {
-    font-size: 1.6rem; /* Increased font size for paragraphs */
-}
-
-/* Media query for larger screens (e.g., laptops) */
-@media (min-width: 768px) {
-    #projects-section {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: center; /* Center horizontally */
-    }
-
-    .project-tile {
-        flex: 0 0 calc(50% - 40px); /* Two columns of tiles */
-    }
-
-    .project-tile h2 {
-        font-size: 2rem; /* Adjusted font size for project titles on larger screens */
-    }
-}
-
-/* Media query for mobile phones and small screens */
-@media (max-width: 768px) {
-    #projects-section {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: center; /* Center horizontally */
-    }
-
-    .project-tile {
-        flex: 0 0 calc(100% - 40px); /* Make project tiles take full width on mobile */
-    }
-
-    .project-tile h2 {
-        font-size: 1.6rem; /* Adjusted font size for project titles on smaller screens */
-    }
-}
-
-/* Style the Contact section */
-#contact-section {
-    background: linear-gradient(135deg, #f2f2f2, #e6e6e6);
+/* Style the Projects and Skills Sections with accessibility in mind */
+#projects-section,
+#skills-section {
+    background-color: #F8F8F8; /* Light gray background for readability */
+    padding: 20vh 0; /* Adjusted padding and height for full viewport coverage */
     text-align: center;
-    padding: 100px 0; /* Adjusted padding for the Contact section */
-    color: #333; /* Dark gray font color */
+}
+
+/* Style the Project Tiles and Skill Cards */
+.projects-container,
+.skills-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.project-tile,
+.skill-card {
+    background-color: #fff; /* White background for readability */
+    padding: 20px;
+    border: 2px solid #444; /* Slightly darker gray border for contrast */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+    margin: 10px;
+    max-width: calc(50% - 20px);
+}
+
+/* Ensure the image inside each Project Tile is responsive */
+.project-tile img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* Adjusted font size for item titles with a traditional font */
+.project-tile h3,
+.skill-card h3 {
+    font-size: 2rem;
+    word-wrap: break-word;
+    font-family: 'Georgia', serif;
+}
+
+/* Adjusted font size for item descriptions */
+.project-tile p,
+.skill-card p {
+    font-size: 1.6rem;
+}
+
+/* Style section titles with a traditional font */
+#projects-section h2,
+#skills-section h2 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    font-weight: bold;
+    text-align: center;
+    font-family: 'Georgia', serif;
+}
+
+/* Style the Contact Section with a modern and user-friendly approach */
+#contact-section {
+    background-color: #222; /* Dark background for a modern look */
+    padding: 20vh 0; /* Adjusted padding and height for full viewport coverage */
+    text-align: center;
 }
 
 #contact-section header {
-    font-size: 3rem; /* Increased font size for the header */
-    margin-bottom: 20px;
-    font-family: 'Oswald', sans-serif;
+    font-size: 2.5rem;
+    color: #FFA500; /* Orange font color for a modern touch */
 }
 
-#contact-section p {
-    font-size: 1.6rem; /* Increased font size for the text */
+#contact-section article {
+    font-size: 1.6rem;
+    color: #fff; /* White font color for readability */
 }
 
 #contact-link {
     display: inline-block;
-    margin-top: 30px; /* Increased margin for better spacing */
-    padding: 20px 40px; /* Increased padding for a modern look */
-    background-color: #4A90E2; /* Blue background color that matches your profile */
-    color: #fff; /* White font color */
+    margin-top: 30px;
+    padding: 20px 40px;
+    background-color: #FFA500; /* Orange background color for a modern twist */
+    color: #333; /* Dark gray font color for readability */
     text-decoration: none;
     border-radius: 10px;
-    font-size: 1.8rem; /* Adjusted font size for the button */
+    font-size: 1.8rem;
 }
 
 #contact-link:hover {
-    background-color: #3A75BB; /* Slightly darker blue on hover */
+    background-color: #FF7F00; /* Slightly darker orange on hover for a subtle effect */
+}
+
+/* Media query for larger screens */
+@media screen and (min-width: 768px) {
+    .project-tile,
+    .skill-card {
+        max-width: calc(33.33% - 20px);
+    }
+}
+
+/* Media query for smaller screens */
+@media screen and (max-width: 767px) {
+    .project-tile,
+    .skill-card {
+        max-width: calc(100% - 20px);
+    }
+
+    /* Adjust the font size for better readability on smaller screens */
+    #welcome-section h1 {
+        font-size: 2.5rem;
+    }
+
+    #welcome-section p {
+        font-size: 1.4rem;
+    }
+
+    #profile-link {
+        font-size: 1.6rem;
+    }
+
+    #projects-section h2, #skills-section h2 {
+        font-size: 2.2rem;
+    }
+}
+
+/* Media query for even smaller screens (e.g., mobile devices) */
+@media screen and (max-width: 480px) {
+    #welcome-section h1 {
+        font-size: 2rem;
+    }
+
+    #welcome-section p {
+        font-size: 1.2rem;
+    }
+
+    #profile-link {
+        font-size: 1.4rem;
+    }
+
+    #projects-section h2, #skills-section h2 {
+        font-size: 2rem;
+    }
 }
