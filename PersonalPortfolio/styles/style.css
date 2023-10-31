@@ -1,0 +1,177 @@
+/* Reset default margin and padding for all elements */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Scroll behavior for anchor links */
+html {
+    scroll-behavior: smooth; /* Enable smooth scrolling */
+}
+
+/* Set a background color for the body */
+body {
+    min-width: 290px;
+    color: #333; /* Dark gray font color */
+    background-color: #f2f2f2; /* Light gray background */
+    font-family: 'Open Sans', Arial, sans-serif;
+    line-height: 1.5;
+}
+
+/* Style the navigation bar */
+#navbar {
+    background-color: #4A90E2; /* Blue background color that matches your profile */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px 0; /* Added padding to improve visibility */
+}
+
+#navbar ul {
+    display: flex;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+#navbar li {
+    margin: 0 20px; /* Increased margin for better spacing */
+}
+
+#navbar a {
+    text-decoration: none;
+    color: #fff; /* White font color */
+    cursor: pointer;
+    font-size: 1.8rem; /* Increased font size for navigation links */
+}
+
+/* Style the header/welcome section */
+#welcome-section {
+    background: linear-gradient(135deg, #f2f2f2, #e6e6e6);
+    text-align: center;
+    padding: 100px 0; /* Increased padding for emphasis */
+    color: #333; /* Slightly darker gray font color */
+}
+
+#welcome-section h1 {
+    font-size: 3rem; /* Increased font size for the heading */
+    margin-bottom: 20px; /* Increased margin for better spacing */
+    font-family: 'Oswald', sans-serif;
+}
+
+#welcome-section p {
+    font-size: 1.6rem; /* Increased font size for the description */
+}
+
+#profile-link {
+    display: inline-block;
+    margin-top: 30px; /* Increased margin for better spacing */
+    padding: 20px 40px; /* Increased padding for better visibility */
+    background-color: #4A90E2; /* Blue background color that matches your profile */
+    color: #fff; /* White font color */
+    text-decoration: none;
+    border-radius: 10px; /* Increased border radius for a rounded button appearance */
+    font-size: 1.8rem; /* Increased font size for the button */
+}
+
+/* Style the project tiles */
+.project-tile {
+    background-color: #f8f8f8; /* Light gray background */
+    padding: 30px; /* Increased padding for a more modern appearance */
+    margin: 20px;
+    border: 2px solid #ddd; /* Add a border for a polished look */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+    max-width: 100%; /* Make project tiles take full width on all screens */
+    text-align: center; /* Center the text within the tiles */
+}
+
+/* Style the project image */
+.project-tile img {
+    max-width: 100%; /* Ensure the image doesn't exceed its container's width */
+    height: auto; /* Maintain the image's aspect ratio */
+    width: 100%; /* Make the image responsive without a fixed height */
+}
+
+/* Ensure h2 remains responsive and wraps if needed */
+.project-tile h2 {
+    font-size: 2rem; /* Increased font size for project titles */
+    word-wrap: break-word; /* Allow long words to wrap */
+}
+
+/* Style <p> elements */
+p {
+    font-size: 1.6rem; /* Increased font size for paragraphs */
+}
+
+/* Media query for larger screens (e.g., laptops) */
+@media (min-width: 768px) {
+    #projects-section {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center; /* Center horizontally */
+    }
+
+    .project-tile {
+        flex: 0 0 calc(50% - 40px); /* Two columns of tiles */
+    }
+
+    .project-tile h2 {
+        font-size: 2rem; /* Adjusted font size for project titles on larger screens */
+    }
+}
+
+/* Media query for mobile phones and small screens */
+@media (max-width: 768px) {
+    #projects-section {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center; /* Center horizontally */
+    }
+
+    .project-tile {
+        flex: 0 0 calc(100% - 40px); /* Make project tiles take full width on mobile */
+    }
+
+    .project-tile h2 {
+        font-size: 1.6rem; /* Adjusted font size for project titles on smaller screens */
+    }
+}
+
+/* Style the Contact section */
+#contact-section {
+    background: linear-gradient(135deg, #f2f2f2, #e6e6e6);
+    text-align: center;
+    padding: 100px 0; /* Adjusted padding for the Contact section */
+    color: #333; /* Dark gray font color */
+}
+
+#contact-section header {
+    font-size: 3rem; /* Increased font size for the header */
+    margin-bottom: 20px;
+    font-family: 'Oswald', sans-serif;
+}
+
+#contact-section p {
+    font-size: 1.6rem; /* Increased font size for the text */
+}
+
+#contact-link {
+    display: inline-block;
+    margin-top: 30px; /* Increased margin for better spacing */
+    padding: 20px 40px; /* Increased padding for a modern look */
+    background-color: #4A90E2; /* Blue background color that matches your profile */
+    color: #fff; /* White font color */
+    text-decoration: none;
+    border-radius: 10px;
+    font-size: 1.8rem; /* Adjusted font size for the button */
+}
+
+#contact-link:hover {
+    background-color: #3A75BB; /* Slightly darker blue on hover */
+}
