@@ -1,103 +1,226 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="styles/style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;700&family=Lato:wght@400;700&display=swap" rel="stylesheet">
+/* Reset default margin and padding for all elements */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 
-    <title>Your Name - Portfolio</title>
-</head>
-<body>
-    <nav id="navbar">
-        <ul>
-            <li><a href="#welcome-section">Home</a></li>
-            <li><a href="#projects-section">Projects</a></li>
-            <li><a href="#skills-section">Skills</a></li>
-            <li><a href="#contact-section">Contact</a></li>
-        </ul>
-    </nav>
-    
-    <header id="welcome-section">
-        <h1>Hi, I'm Rafa</h1>
-        <p>a Front-End Developer and Creative Enthusiast</p>
-        <a id="profile-link" href="https://github.com/garricode" target="_blank">Visit my GitHub</a>
-    </header>
+/* Scroll behavior for anchor links */
+html {
+    scroll-behavior: smooth;
+}
 
-    <section id="projects-section">
-        <h2>Projects</h2>
-        <div class="projects-container">
-            <div class="project-tile">
-                <a href="images/tributepage.png" target="_blank">
-                <img src="images/tributepage.png" alt="tributepage">
-                </a>
-                <h3>Tribute Page</h3>
-                <p>Leonardo da Vinci</p>
-            </div>
-            <div class="project-tile">
-                <a href="images/surveyform.png" target="_blank">
-                <img src="images/surveyform.png" alt="surveyform">
-                </a>
-                <h3>Survey Form</h3>
-                <p>Fiction Reader Preferences Survey</p>
-            </div>
-            <div class="project-tile">
-                <a href="images/technicaldocumentation.png" target="_blank">
-                <img src="images/technicaldocumentation.png" alt="technicaldocumentation">
-                </a>
-                <h3>Technical Documentation</h3>
-                <p>HTML Text Fundamental</p>
-            </div>
-            <div class="project-tile">
-                <a href="images/landingpage.png" target="_blank">
-                <img src="images/landingpage.png" alt="landingpage">
-                </a>
-                <h3>Landing Page</h3>
-                <p>Guitar Courses</p>
-            </div>
-            <!-- Repeat the project-tile structure for each project -->
-        </div>
-    </section>
-    
-   
-    <section id="skills-section">
-        <h2>Skills</h2>
-        <div class="skills-container">
-            <div class="skill-card">
-                <h3>Web Development</h3>
-                <p>My expertise in web development ensures seamless, tailor-made solutions for your digital projects. I continuously update my skills to deliver cutting-edge websites.</p>
-            </div>
-            <div class="skill-card">
-                <h3>WordPress</h3>
-                <p>With a strong command of WordPress, I craft feature-rich websites that precisely meet your unique needs, enhancing your online presence.</p>
-            </div>
-            <div class="skill-card">
-                <h3>Bilingual in Spanish</h3>
-                <p>Proficient in both English and Spanish, I facilitate effective cross-cultural communication, making your content accessible to a broader audience.</p>
-            </div>
-            <div class="skill-card">
-                <h3>Problem-Solving</h3>
-                <p>I approach technical challenges with a keen problem-solving mindset, guaranteeing the smooth operation of your website and ensuring project success.</p>
-            </div>
-            <div class="skill-card">
-                <h3>Technical Proficiency</h3>
-                <p>Committed to staying at the forefront of industry trends, I provide your projects with the benefits of the latest technical advancements and best practices.</p>
-            </div>
-            <div class="skill-card">
-                <h3>Community Empowerment</h3>
-                <p>My passion for non-profit causes aligns with my commitment to utilizing technology for community upliftment, perfectly aligning with your project's goals.</p>
-            </div>
-        </div>
-    </section>
-    
+/* Set a background color for the body */
+body {
+    min-width: 290px;
+    color: #333; /* Dark gray font color for accessibility */
+    background-color: #F8F8F8; /* Light gray background for readability */
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+}
 
+/* Add elegant fonts for header, headings, and buttons */
+h1, h2, h3, h4, h5, h6, #profile-link, #contact-link {
+    font-family: 'Helvetica Neue', sans-serif;
+}
 
-    <section id="contact-section">
-        <header>Contact</header>
-        <article>
-            <p>Feel free to get in touch for collaboration, code discussions, or just a friendly chat over coffee. I'm always open to new opportunities and connecting with fellow enthusiasts.</p>
-            <a id="contact-link" href="https://www.linkedin.com/in/rafaelgarrigos/">Get in Touch</a>
-        </article>
-    </section>
-</body>
-</html>
+/* Style the navigation bar with a modern and user-friendly approach */
+#navbar {
+    background-color: #222; /* Dark background for a modern look */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px 0;
+}
+
+#navbar ul {
+    display: flex;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+#navbar li {
+    margin: 0 20px;
+}
+
+#navbar a {
+    text-decoration: none;
+    color: #FFA500; /* Orange font color for a modern touch */
+    cursor: pointer;
+    font-size: 1.8rem;
+}
+
+/* Style the header/welcome section with a clean and elegant design */
+#welcome-section {
+    background: linear-gradient(135deg, #F8F8F8, #E0E0E0); /* Light gradient background for readability */
+    text-align: center;
+    padding: 20vh 0; /* Adjusted padding and height for full viewport coverage */
+    color: #333; /* Dark gray font color for readability */
+}
+
+#welcome-section h1 {
+    font-size: 3rem;
+    margin-bottom: 20px;
+    font-family: 'Georgia', serif;
+}
+
+#welcome-section p {
+    font-size: 1.6rem;
+}
+
+#profile-link {
+    display: inline-block;
+    margin-top: 30px;
+    padding: 20px 40px;
+    background-color: #FFA500; /* Orange background color for a modern twist */
+    color: #333; /* Dark gray font color for readability */
+    text-decoration: none;
+    border-radius: 10px;
+    font-size: 1.8rem;
+}
+
+/* Style the Projects and Skills Sections with accessibility in mind */
+#projects-section,
+#skills-section {
+    background-color: #F8F8F8; /* Light gray background for readability */
+    padding: 20vh 0; /* Adjusted padding and height for full viewport coverage */
+    text-align: center;
+}
+
+/* Style the Project Tiles and Skill Cards */
+.projects-container,
+.skills-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.project-tile,
+.skill-card {
+    background-color: #fff; /* White background for readability */
+    padding: 20px;
+    border: 2px solid #444; /* Slightly darker gray border for contrast */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+    margin: 10px;
+    max-width: calc(50% - 20px);
+}
+
+/* Ensure the image inside each Project Tile is responsive */
+.project-tile img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* Adjusted font size for item titles with a traditional font */
+.project-tile h3,
+.skill-card h3 {
+    font-size: 2rem;
+    word-wrap: break-word;
+    font-family: 'Georgia', serif;
+}
+
+/* Adjusted font size for item descriptions */
+.project-tile p,
+.skill-card p {
+    font-size: 1.6rem;
+}
+
+/* Style section titles with a traditional font */
+#projects-section h2,
+#skills-section h2 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    font-weight: bold;
+    text-align: center;
+    font-family: 'Georgia', serif;
+}
+
+/* Style the Contact Section with a modern and user-friendly approach */
+#contact-section {
+    background-color: #222; /* Dark background for a modern look */
+    padding: 20vh 0; /* Adjusted padding and height for full viewport coverage */
+    text-align: center;
+}
+
+#contact-section header {
+    font-size: 2.5rem;
+    color: #FFA500; /* Orange font color for a modern touch */
+}
+
+#contact-section article {
+    font-size: 1.6rem;
+    color: #fff; /* White font color for readability */
+}
+
+#contact-link {
+    display: inline-block;
+    margin-top: 30px;
+    padding: 20px 40px;
+    background-color: #FFA500; /* Orange background color for a modern twist */
+    color: #333; /* Dark gray font color for readability */
+    text-decoration: none;
+    border-radius: 10px;
+    font-size: 1.8rem;
+}
+
+#contact-link:hover {
+    background-color: #FF7F00; /* Slightly darker orange on hover for a subtle effect */
+}
+
+/* Media query for larger screens */
+@media screen and (min-width: 768px) {
+    .project-tile,
+    .skill-card {
+        max-width: calc(33.33% - 20px);
+    }
+}
+
+/* Media query for smaller screens */
+@media screen and (max-width: 767px) {
+    .project-tile,
+    .skill-card {
+        max-width: calc(100% - 20px);
+    }
+
+    /* Adjust the font size for better readability on smaller screens */
+    #welcome-section h1 {
+        font-size: 2.5rem;
+    }
+
+    #welcome-section p {
+        font-size: 1.4rem;
+    }
+
+    #profile-link {
+        font-size: 1.6rem;
+    }
+
+    #projects-section h2, #skills-section h2 {
+        font-size: 2.2rem;
+    }
+}
+
+/* Media query for even smaller screens (e.g., mobile devices) */
+@media screen and (max-width: 480px) {
+    #welcome-section h1 {
+        font-size: 2rem;
+    }
+
+    #welcome-section p {
+        font-size: 1.2rem;
+    }
+
+    #profile-link {
+        font-size: 1.4rem;
+    }
+
+    #projects-section h2, #skills-section h2 {
+        font-size: 2rem;
+    }
+}
